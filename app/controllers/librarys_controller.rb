@@ -2,7 +2,6 @@ class LibrarysController < ApplicationController
   before_action :library_set, except: [:index, :new, :create, :show]
     before_action :library_rundam_all, only: [:index, :show]
     before_action :library_rundam_five, only: [:index, :show]
-    before_action :library_hindu_shuffle, only: [:index, :show]
   
    def index
     @librarys = Library.order("created_at DESC")
@@ -46,19 +45,19 @@ class LibrarysController < ApplicationController
    end
   
    private
-              def library_params
-                params.require(:library).permit(:card_type, :image, :numbers)
-              end
-  
-              def library_set
-                @library = Library.find(params[:id])
-              end
-  
-              def library_rundam_all
-                @library_rundam_all = Library.order("RAND()")
-              end
-  
-              def library_rundam_five
-                @library_rundam_five = Library.order("RAND()").limit(5)
-              end
+                            def library_params
+                              params.require(:library).permit(:card_type, :image, :numbers)
+                            end
+                
+                            def library_set
+                              @library = Library.find(params[:id])
+                            end
+                
+                            def library_rundam_all
+                              @library_rundam_all = Library.order("RAND()")
+                            end
+                
+                            def library_rundam_five
+                              @library_rundam_five = Library.order("RAND()").limit(5)
+                            end
 end
