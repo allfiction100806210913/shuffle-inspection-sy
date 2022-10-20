@@ -16,4 +16,5 @@ class FarrowsController < ApplicationController
     farrow_3_1 = riffle_3[0,27].reverse
     farrow_3_2 = riffle_3[rand(20..27),rand(27..)].reverse
     farrow_4 = riffle_3_1.zip(riffle_3_2).flatten.compact
+  end
 end
