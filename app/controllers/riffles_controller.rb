@@ -1,0 +1,2 @@
+class RifflesController < ApplicationController
+end

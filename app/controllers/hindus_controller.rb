@@ -1,0 +1,2 @@
+class HindusController < ApplicationController
+end

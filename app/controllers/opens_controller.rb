@@ -1,0 +1,2 @@
+class OpensController < ApplicationController
+end

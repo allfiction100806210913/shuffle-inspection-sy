@@ -1,0 +1,2 @@
+class FarrowsController < ApplicationController
+end

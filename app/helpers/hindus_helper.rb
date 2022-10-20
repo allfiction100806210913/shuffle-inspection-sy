@@ -1,0 +1,2 @@
+module HindusHelper
+end
