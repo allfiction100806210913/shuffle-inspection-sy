@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "tops#index"
   resources :librarys
-  resources :hindos
+  resources :hindus
   resources :tops
   resources :opens
   resources :riffles
