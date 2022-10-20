@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+ <br>
+ <p class='Copyright'>
+   コンピューターによる完全なランダムシャッフルの結果を表示しています。<br>
+   シャッフル結果は理想的で、これを再現するには複数のシャッフル手段を上手に組み合わせる必要があります。
+ </p>
+ 
+ <div class="show-image_all">
+    <% @library_rundam_all.each do |libra| %>
+       <%= image_tag libra.image, class: "show-image_top" %>
+    <% end %>
+ </div>
+
+  <%= render "shared/footer"%>

@@ -1,0 +1,43 @@
+<%= render "shared/header" %>
+
+  <%= form_with model: @library, url: librarys_path, local: true do |f|%>
+
+    <div class="container">
+      <div class="row">
+        <div class="border col-5">
+
+          <br>
+          <h1>カード情報登録</h1>
+          <br>
+
+            <div class="field">
+              <%= f.label :card_type, "カードタイプ", class: "detail__title_form"  %><br />
+              <%= f.text_field :card_type, class: :form__text, class: "form-control  btn-dark" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :numbers, "数値", class: "detail__title_form" %><br />
+              <%= f.text_field :numbers, class: :form__text, class: "form-control  btn-dark"%>
+            </div>
+
+            <div class="field">
+              <%= f.label :image, "カード画像", class: "detail__title_form"  %><br />
+              <%= f.file_field :image %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "保存する", class: "btn  btn-dark"  %>
+            </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= render "shared/footer"%>
