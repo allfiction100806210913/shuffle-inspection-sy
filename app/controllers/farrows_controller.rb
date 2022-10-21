@@ -8,10 +8,13 @@ class FarrowsController < ApplicationController
   private
 
   def farrow_shuffle
-    farrow = Library.order("created_at DESC")
+    library_farrow_shuffle = Library.order("created_at DESC")
+    farrow_1 = library_farrow_shuffle.last(rand(27..52))
+    farrow_2 = library_farrow_shuffle - farrow_1
+    farrow_3_0 = farrow_1.slice(0)
+    farrow_2.insert(rand(0..1),farrow_3_0)
+ 
 
-    farrow_1 = farrow.last(rand(25..29))
-    farrow_2 = farrow - farrow_1
     
   end
 end
