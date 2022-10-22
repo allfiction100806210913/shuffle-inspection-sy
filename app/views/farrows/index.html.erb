@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+ <br>
+ <p class='Copyright'>
+   ファローシャッフルはカードゲームでよく使われている手法で、<br>
+   最も実戦的なシャッフル方法です。何度も繰り返すことでカードをよく混ぜることができます。
+ </p>
+  <div class="show-image">
+    <div class="show-image_all">
+        <% @farrow_shuffle.each do |libra| %>
+          <%= image_tag libra.image, class: "show-image_top" %>
+        <% end %>
+    </div>
+  </div>
+  <%= render "shared/footer"%>
